@@ -1,0 +1,21 @@
+<%-include('partials/header');-%>
+
+    <div id="home">
+        <h1>
+            <%=title%>
+        </h1>
+        <% for(let i=0; i < postCollection.length ;i++ ){ %>
+            <div id="post">
+                <h2>
+                    <%=postCollection[i].newTitle%>
+                </h2>
+                <p>
+                    <%=postCollection[i].newContent.slice(0,100)%> ...
+                    <a href="/post/<%= postCollection[i].newTitle %>">Read More</a>
+                    <% console.log(postCollection[i].newTitle) %>
+                </p>
+            </div>
+        <% } %>
+    </div>
+<%-include('partials/footer');-%>
+
